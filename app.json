@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Archivo Digital",
+    "slug": "Archivo_Digital",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#dfe3f2"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#dfe3f2"
+      },
+      "package": "com.mercadatos.archivodigital"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
