@@ -1,8 +1,9 @@
 import { StyleSheet, Text, View, Image ,TouchableOpacity, Alert,Button } from 'react-native';
-import React from 'react';
+import React from "react";
+
 
 function Home({ navigation }) {
-
+  
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Button

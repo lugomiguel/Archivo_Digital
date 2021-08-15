@@ -1,6 +1,6 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import React, { useEffect, useState, } from 'react';
-import { StyleSheet, Text, View, Image ,TouchableOpacity, Alert } from 'react-native';
+import { StyleSheet, Text, View, Image ,TouchableOpacity } from 'react-native';
 // import * as Font from 'expo-font';
 import logo from '../img/logo.png'
 import footer from '../img/logo-blanco-mercadatos.png'
