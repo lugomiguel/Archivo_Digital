@@ -1,114 +1,36 @@
-import { LinearGradient } from 'expo-linear-gradient';
-import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, Image ,TouchableOpacity, Alert } from 'react-native';
-// import * as Font from 'expo-font';
-import logo from './assets/img/logo.png'
-import footer from './assets/img/logo-blanco-mercadatos.png'
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Welcome from './assets/componets/Welcome'
+import Login from './assets/componets/Login'
+import Home from './assets/componets/Home'
+import Search from './assets/componets/Search'
+import Result from './assets/componets/Result'
+import Viewdata from './assets/componets/Viewdata'
 
-export default function App() {
+const Stack = createStackNavigator();
 
-  // const [frontsLoaded, setFontsLoaded] = useState(false);
-
-  // useEffect(() => {
-  //   if(!frontsLoaded){
-  //     loadFonts();
-  //   }
-  // });
-
-  // const loadFonts = async ()=>{
-  //   await Font.loadAsync({
-  //     'poppins-bold' : require('./assets/fonts/Poppins-Bold.ttf'),
-  //     'poppins-regular' : require('./assets/fonts/Poppins-Regular.ttf'),
-  //   });
-  //   setFontsLoaded(true)
-  // }
-  
+function MyStack() {
   return (
-    <View style={styles.container}>
-      <LinearGradient
-        // Background Linear Gradient
-        colors={['#4f59c9', '#6622a9']}
-        style={styles.background}>
-          <Image
-          source={logo}
-          style={styles.Image}
-          />
-          <TouchableOpacity
-          onPress={() => Alert.alert("Esto es una demo")}
-          style={styles.boton1}
-          >
-            <Text
-            style={styles.text1}
-            >Inicia sesíon</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-          style={styles.boton2}
-          >
-            <Text
-            style={styles.text2}
-            >Regístrate</Text>
-          </TouchableOpacity>
-          <Image
-          source={footer}
-          style={styles.Image2}
-          />
-        </LinearGradient>
-    </View>
-  ); 
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false
+      }}
+    >
+      <Stack.Screen name="Welcome" component={Welcome} />
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Search" component={Search} />
+      <Stack.Screen name="Result" component={Result} />
+      <Stack.Screen name="Viewdata" component={Viewdata} />
+    </Stack.Navigator>
+  );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  background: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    height: "100%",
-  },
-  Image:{
-    alignSelf: 'center',
-    height:155,
-    width: 300,
-    marginTop: "48%",
-  },
-  boton1:{
-    marginTop: "46%",
-    alignSelf: 'center',
-    backgroundColor: '#00c1c1',
-    borderRadius: 25,
-    padding: 12,
-    paddingRight:36,
-    paddingLeft:36,
-    margin: 10
-  },
-  text1:{
-    color:'#dfe3f2',
-    fontSize: 17,
-    // fontFamily: 'poppins-bold',
-  },
-  boton2:{
-    alignSelf: 'center',
-    backgroundColor: '#dfe3f2',
-    borderRadius: 25,
-    padding: 12,
-    paddingRight:44,
-    paddingLeft:44,
-    margin: 10
-  },
-  text2:{
-    color:'#00c1c1',
-    fontSize: 17,
-    // fontFamily: 'poppins-bold',
-  },
-  Image2:{
-    alignSelf: 'center',
-    height: 48,
-    width: 250,
-    marginTop: 30,
-  }
-});
+export default function App() {
+  return (
+    <NavigationContainer>
+      <MyStack/>
+    </NavigationContainer>
+  );
+}
