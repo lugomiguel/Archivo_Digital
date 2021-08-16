@@ -6,6 +6,7 @@ import globalstyles from '../styles/global'
 import img_user from '../img/11.png';
 import back from '../img/14.png';
 import menu from '../img/15.png';
+import logocolor from '../img/Logo-mercadatos.png'
 
 
 function Login({ navigation }) {
@@ -21,7 +22,7 @@ function Login({ navigation }) {
     <View style={globalstyles.container}>
       <TouchableOpacity
         onPress={() => navigation.goBack()}
-        style={globalstyles.back}
+        style={globalstyles.backpress} 
       >
         <Image
           source={back}
@@ -30,16 +31,18 @@ function Login({ navigation }) {
       </TouchableOpacity>
       <Image
         source={menu}
-        style={globalstyles.back}
+        style={globalstyles.menu}
       />
-      <Text>
+      <Text
+        style={globalstyles.textinicio}>
         Inicia sesión
       </Text>
       <Image
         source={img_user}
-        style={globalstyles.back}
+        style={globalstyles.userphoto}
       />
-      <Text>
+      <Text
+      style={globalstyles.textSoy}>
         Soy
       </Text>
       <DropDownPicker
@@ -50,41 +53,35 @@ function Login({ navigation }) {
         setValue={setValue}
         setItems={setItems}
         placeholder="Seleccionar"
-        containerStyle={{ height: 200, margin: 2 }}
+        containerStyle={globalstyles.dropdown}
       />
       <TextInput
-        style={{
-          height: 40,
-          borderColor: 'gray',
-          borderWidth: 1
-        }}
-        defaultValue="Correo electrónico"
+        style={globalstyles.textemail}
+        placeholder='Correo electrónico'
       />
       <TextInput
-        style={{
-          height: 40,
-          borderColor: 'gray',
-          borderWidth: 1
-        }}
-        defaultValue="Contraseña"
+        style={globalstyles.textemail}
+        placeholder="Contraseña"
+        secureTextEntry={true}
       />
       <CheckBox
-        title="My Checkbox"
+        title="Recordar mis datos"
         checked={checked}
+        containerStyle={globalstyles.Checkstyles}
         onPress={() => toggleChecked(!checked)}
       />
       <TouchableOpacity
         onPress={() => navigation.navigate('Home')}
-        style={globalstyles.boton1}
+        style={globalstyles.botonlog}
       >
         <Text
           style={globalstyles.text1}
         >Inicia sesíon</Text>
       </TouchableOpacity>
-      {/* <Image
-        source={img_user}
-      // style={}
-      /> */}
+      <Image
+        source={logocolor}
+        style={globalstyles.logocolor}
+      />
     </View>
   );
 }
