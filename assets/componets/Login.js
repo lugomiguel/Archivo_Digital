@@ -16,9 +16,17 @@ function Login({ navigation }) {
   return (
     <View style={styles.container}>
       <TouchableOpacity
-        onPress={() => navigation.navigate('Login')}
+        onPress={() =>  navigation.goBack()}
       // style={}
-      ></TouchableOpacity>
+      >
+      <Text>
+        Atras
+      </Text>
+      {/* <Image
+        source={img_user}
+      // style={}
+      /> */}
+      </TouchableOpacity>
       <Text>
         Inicia sesión
       </Text>
@@ -68,7 +76,6 @@ function Login({ navigation }) {
             // style={styles.text1}
             >Inicia sesíon</Text>
           </TouchableOpacity>       
-      <Button title="Go back" onPress={() => navigation.goBack()} />
       {/* <Image
         source={img_user}
       // style={}
@@ -80,8 +87,8 @@ function Login({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // alignItems: 'center',
-    // justifyContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 
