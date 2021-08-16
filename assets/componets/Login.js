@@ -1,8 +1,12 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, Button, ScrollView, TextInput } from 'react-native';
+import { Text, View, Image, TouchableOpacity, ScrollView, TextInput } from 'react-native';
 import React, { useState } from "react";
 import DropDownPicker from 'react-native-dropdown-picker'
 import { CheckBox } from 'react-native-elements'
+import globalstyles from '../styles/global'
 import img_user from '../img/11.png';
+import back from '../img/14.png';
+import menu from '../img/15.png';
+
 
 function Login({ navigation }) {
   const [open, setOpen] = useState(false);
@@ -14,26 +18,27 @@ function Login({ navigation }) {
   const [checked, toggleChecked] = useState(false);
 
   return (
-    <View style={styles.container}>
+    <View style={globalstyles.container}>
       <TouchableOpacity
-        onPress={() =>  navigation.goBack()}
-      // style={}
+        onPress={() => navigation.goBack()}
+        style={globalstyles.back}
       >
-      <Text>
-        Atras
-      </Text>
-      {/* <Image
-        source={img_user}
-      // style={}
-      /> */}
+        <Image
+          source={back}
+          style={globalstyles.back}
+        />
       </TouchableOpacity>
+      <Image
+        source={menu}
+        style={globalstyles.back}
+      />
       <Text>
         Inicia sesión
       </Text>
-      {/* <Image
+      <Image
         source={img_user}
-      // style={}
-      /> */}
+        style={globalstyles.back}
+      />
       <Text>
         Soy
       </Text>
@@ -63,19 +68,19 @@ function Login({ navigation }) {
         }}
         defaultValue="Contraseña"
       />
-     <CheckBox
-            title="My Checkbox"
-            checked={checked}
-            onPress={() => toggleChecked(!checked)}
-          />
+      <CheckBox
+        title="My Checkbox"
+        checked={checked}
+        onPress={() => toggleChecked(!checked)}
+      />
       <TouchableOpacity
-          onPress={() => navigation.navigate('Home')}
-          // style={styles.boton1}
-          >
-            <Text
-            // style={styles.text1}
-            >Inicia sesíon</Text>
-          </TouchableOpacity>       
+        onPress={() => navigation.navigate('Home')}
+        style={globalstyles.boton1}
+      >
+        <Text
+          style={globalstyles.text1}
+        >Inicia sesíon</Text>
+      </TouchableOpacity>
       {/* <Image
         source={img_user}
       // style={}
@@ -83,13 +88,5 @@ function Login({ navigation }) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default Login;
