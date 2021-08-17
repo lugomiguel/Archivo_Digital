@@ -160,6 +160,19 @@ const globalstyles = StyleSheet.create({
         margin: 0,
         padding: 0,
     },
+    Imputgradient:{
+        display: 'flex',
+        flexDirection: 'row',
+        width: 320,
+        marginTop:80,
+        marginBottom:30,
+        borderRadius: 5,
+    },
+    textImputgradient:{
+        color: 'white',
+        fontSize: 18,
+        width: 250,
+    }
 });
 
 export default globalstyles

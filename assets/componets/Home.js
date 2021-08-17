@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, Linking} from 'react-native';
+import { Text, View, Image, TouchableOpacity, Linking} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import React from "react";
 import globalstyles from '../styles/global'
@@ -37,7 +37,7 @@ function Home({ navigation }) {
         <Text
           style={globalstyles.texthome}
         >
-          !Bienvenido¡
+          ¡Bienvenido!
         </Text>
       </LinearGradient>
       <View style={globalstyles.containerhome}>
@@ -144,11 +144,4 @@ function Home({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 export default Home;
