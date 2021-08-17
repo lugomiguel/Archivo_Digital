@@ -172,7 +172,11 @@ const globalstyles = StyleSheet.create({
         color: 'white',
         fontSize: 18,
         width: 250,
-    }
+    },
+    imgResult:{
+        height: 110,
+        width: 110,
+    },
 });
 
 export default globalstyles

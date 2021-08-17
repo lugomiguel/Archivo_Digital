@@ -42,7 +42,6 @@ function Home({ navigation }) {
       </LinearGradient>
       <View style={globalstyles.containerhome}>
         <TouchableOpacity
-          onPress={() => navigation.goBack()}
           style={globalstyles.datahometouch}
         >
           <Image
@@ -54,7 +53,6 @@ function Home({ navigation }) {
           >¿Quienes Somos?</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.goBack()}
           style={globalstyles.datahometouch}
         >
           <Image
@@ -66,7 +64,6 @@ function Home({ navigation }) {
           >Actualidad/ Noticias</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.goBack()}
           style={globalstyles.datahometouch}
         >
           <Image
@@ -90,7 +87,6 @@ function Home({ navigation }) {
           >Consultas</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.goBack()}
           style={globalstyles.datahometouch}
         >
           <Image
