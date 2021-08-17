@@ -75,16 +75,16 @@ const globalstyles = StyleSheet.create({
     },
     textinicio:{
         fontSize: 32,
-        top: -50,
+        bottom: 50,
     },
     userphoto:{
         height: 110,
         width: 110,
-        top: -30,
+        bottom: 30,
     },
     textSoy:{
         fontSize: 28,
-        top: -20,
+        bottom: 20,
         color: '#00c1c1',
     },
     dropdown:{
@@ -116,7 +116,50 @@ const globalstyles = StyleSheet.create({
         width: 140,
         height: 30,
         padding: 0,
-    }
+    },
+    containerhomeheder:{
+        backgroundColor: '#4f59c9',
+        alignItems: 'center',
+        paddingTop: 100,
+        paddingBottom: 10,
+        margin: 0,
+        justifyContent: 'center',
+        marginBottom: 30,
+    },
+    texthome:{
+        bottom: 20,
+        fontSize: 32,
+        color: 'white',
+    },
+    containerhome:{
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: 0,
+        padding: 0,
+    },
+    datahomeimg:{
+        width: 70,
+        height: 70,
+    },
+    datahometouch:{
+        display: 'flex',
+        flexDirection: 'row',
+        backgroundColor: '#dfe3f2',
+        margin: 10,
+        width: 300,
+    },
+    datahometext:{
+        fontSize: 16,
+        paddingTop: 23,
+    },
+    containerhomefoot:{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: 0,
+        padding: 0,
+    },
 });
 
 export default globalstyles

@@ -1,11 +1,11 @@
-import { Text, View, Image, TouchableOpacity, ScrollView, TextInput } from 'react-native';
+import { Text, View, Image, TouchableOpacity, TextInput } from 'react-native';
 import React, { useState } from "react";
 import DropDownPicker from 'react-native-dropdown-picker'
 import { CheckBox } from 'react-native-elements'
 import globalstyles from '../styles/global'
-import img_user from '../img/11.png';
 import back from '../img/14.png';
 import menu from '../img/15.png';
+import img_user from '../img/11.png';
 import logocolor from '../img/Logo-mercadatos.png'
 
 
