@@ -177,6 +177,12 @@ const globalstyles = StyleSheet.create({
         height: 110,
         width: 110,
     },
+    textinfo:{
+        color:'black',
+        fontSize: 16,
+        width: 320,
+        margin:10,
+    },
 });
 
 export default globalstyles
